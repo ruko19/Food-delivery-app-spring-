@@ -3,10 +3,12 @@ import "./Login.css"
 
 const Login = () => {
     return (
-        <div>
-            <h1 className='text-3xl font-bold underline'>login</h1>
-
-        </div>
+        <form >
+            <div>
+                <input type="email" />
+                <input type="password" />
+            </div>
+        </form>
     )
 }
 
