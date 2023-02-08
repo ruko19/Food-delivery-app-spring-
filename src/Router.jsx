@@ -10,7 +10,7 @@ const Router = () => {
 
         <BrowserRouter >
 
-            <div className="bg-slate-300 h-screen text-white flex">
+            <div className="bg-slate-300 h-screen  flex">
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login />} />
