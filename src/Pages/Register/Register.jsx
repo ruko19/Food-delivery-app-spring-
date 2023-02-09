@@ -12,28 +12,28 @@ const Register = () => {
     const { register, control, handleSubmit, reset, formState: { errors } } = useForm();
     const { signup } = useAuth()
     const navigate = useNavigate()
-
+    const [error, setError] = useState("")
     const onSubmit = async (data) => {
-
+        setError("");
         try {
 
             await signup(data.email, data.password)
-            navigate('/home')
+            navigate('/home');
 
         } catch (error) {
-
+            setError(error.message);
 
         }
-
-
 
     }
 
     return (
 
         <div className=' font-bold h-screen bg-primary grid place-items-center'>
-            <div className=' rounded-md shadow-lg p-4 flex flex-col gap-6 bg-white'>
+            <div className=' max-w-min rounded-md shadow-lg p-6 flex flex-col gap-6 bg-white'>
                 <h2>SIGN UP</h2>
+
+                {error && <p className='w-full'>{error}</p>}
 
 
                 <figure className=''>

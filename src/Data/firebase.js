@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+
 import { getAuth } from 'firebase/auth'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -9,12 +9,12 @@ import { getAuth } from 'firebase/auth'
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyChvc4CjlT9vL1ZaXyZ0efWuoU6XxxeV8g",
-    authDomain: "food-delivery-app-b9b74.firebaseapp.com",
-    projectId: "food-delivery-app-b9b74",
-    storageBucket: "food-delivery-app-b9b74.appspot.com",
-    messagingSenderId: "698833111298",
-    appId: "1:698833111298:web:7876bdd0351834409d9a1b",
-    measurementId: "G-EH3NQTH866"
+    authDomain: import.meta.env.VITE_BACKEND_AUTHDOMAIN,
+    projectId: import.meta.env.VITE_BACKEND_PROJECTID,
+    storageBucket: import.meta.env.VITE_BACKEND_STOGAREBUCKET,
+    messagingSenderId: import.meta.env.VITE_BACKEND_MESSAGINGSENDERID,
+    appId: import.meta.env.VITE_BACKEND_APPID,
+    measurementId: import.meta.env.VITE_BACKEND_MEASUREMENTID
 };
 
 // Initialize Firebase

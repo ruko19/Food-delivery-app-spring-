@@ -8,34 +8,33 @@ import imgLogo from "../../assets/img/Logo.svg";
 
 
 const Login = () => {
-    const [user, setuser] = useState([])
     const { register, control, handleSubmit, reset, formState: { errors } } = useForm();
-    const { signup } = useAuth()
+    const { login } = useAuth()
     const navigate = useNavigate()
+    const [error, setError] = useState("")
 
     const onSubmit = async (data) => {
-
+        setError("");
         try {
 
-
-
-            await signup(data.email, data.password)
-            navigate('/home')
+            await login(data.email, data.password)
+            navigate('/home');
 
         } catch (error) {
+            setError(error.message);
 
 
         }
-
-
 
     }
 
     return (
 
         <div className=' font-bold h-screen bg-primary grid place-items-center'>
-            <div className=' rounded-md shadow-lg p-4 flex flex-col gap-6 bg-white'>
+            <div className=' max-w-min rounded-md shadow-lg p-4 flex flex-col gap-6 bg-white'>
                 <h2>Login</h2>
+
+                {error && <p className='w-full'>{error}</p>}
 
 
                 <figure className=''>
@@ -72,7 +71,7 @@ const Login = () => {
 
                     <button className='w-full mt-6 bg-primary p-2 rounded-lg' type='submit'>SIGN UP</button>
                 </form>
-                <p>Need an account ? <span className='underline'><Link to={"/register"} >SIGN UP</Link></span></p>
+                <p>Need an account ? <span className='underline'><Link to={"/register"} >Login</Link></span></p>
             </div>
         </div>
 
