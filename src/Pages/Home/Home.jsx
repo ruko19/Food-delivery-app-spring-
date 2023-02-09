@@ -9,8 +9,8 @@ const Home = () => {
 
 
     return (
-        <div>
-            <h1>Home</h1>
+        <div className='bg-primary h-screen grid place-items-center'>
+            <h1 className=' text-4xl font-extrabold'>Home</h1>
 
         </div>
     )

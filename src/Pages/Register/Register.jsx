@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form'
 import "./Register.css"
 import { useAuth } from '../../hooks/useAuth';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import imgLogo from "../../assets/img/Logo.svg";
 
 
 
 const Register = () => {
-    const [arrayData, setArraytData] = useState([])
+
     const { register, control, handleSubmit, reset, formState: { errors } } = useForm();
     const { signup } = useAuth()
     const navigate = useNavigate()
@@ -15,10 +16,9 @@ const Register = () => {
     const onSubmit = async (data) => {
 
         try {
-            setArraytData([...arrayData, data]);
-            reset()
+
             await signup(data.email, data.password)
-            navigate('/')
+            navigate('/home')
 
         } catch (error) {
 
@@ -29,39 +29,50 @@ const Register = () => {
 
     }
 
-
-
-
     return (
 
-        <form onSubmit={handleSubmit(onSubmit)} >
-            <div>
-                <input {...register('email', { required: true })} autoComplete='email' type="email" placeholder='Ingrese Email' />
-                {
-                    errors.email?.type === 'required' &&
+        <div className=' font-bold h-screen bg-primary grid place-items-center'>
+            <div className=' rounded-md shadow-lg p-4 flex flex-col gap-6 bg-white'>
+                <h2>SIGN UP</h2>
 
-                    <div>
-                        <p className='text-red-700'>
-                            por favor escribe un email
-                        </p>
+
+                <figure className=''>
+                    <img className='mx-auto w-14' src={imgLogo} alt="" />
+                </figure>
+
+                <form onSubmit={handleSubmit(onSubmit)} >
+                    <div className='flex flex-col'>
+                        <label htmlFor="Email">Email</label>
+                        <input className='border-2 rounded-md outline-none' {...register('email', { required: true })} autoComplete='email' type="email" />
+                        {
+                            errors.email?.type === 'required' &&
+
+                            <div>
+                                <p className='text-red-700'>
+                                    por favor escribe un email
+                                </p>
+                            </div>
+                        }
                     </div>
-                }
-            </div>
-            <div>
-                <input {...register('password', { required: true })} type="password" autoComplete='new-password' placeholder='Ingrese Contraseña' />
-                {
-                    errors.password?.type === 'required' &&
+                    <div className='flex flex-col'>
+                        <label htmlFor="Password">Password</label>
+                        <input className='border-2 rounded-md outline-none' {...register('password', { required: true })} type="password" autoComplete='new-password' />
+                        {
+                            errors.password?.type === 'required' &&
 
-                    <div>
-                        <p className='text-red-700'>
-                            por favor escribe una contraseña
-                        </p>
+                            <div>
+                                <p className='text-red-700'>
+                                    por favor escribe una contraseña
+                                </p>
+                            </div>
+                        }
                     </div>
-                }
-            </div>
 
-            <button className='bg-orange-400 p-2 rounded-lg' type='submit'>Registrarse</button>
-        </form>
+                    <button className='w-full mt-6 bg-primary p-2 rounded-lg' type='submit'>SIGN UP</button>
+                </form>
+                <p>Already a user? <span className='underline'><Link to={"/"} >LOGIN</Link></span></p>
+            </div>
+        </div>
 
 
 

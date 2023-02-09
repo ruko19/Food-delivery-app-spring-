@@ -10,11 +10,11 @@ const Router = () => {
 
         <BrowserRouter >
 
-            <div className="bg-slate-300 h-screen  flex">
+            <div className="   ">
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/registro" element={<Register />} />
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
                 </Routes>
             </div>
 
