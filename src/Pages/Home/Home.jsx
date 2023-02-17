@@ -37,8 +37,13 @@ const Home = () => {
         <div className=''>
 
             <div className='flex flex-col gap-2'>
+                {
+                    getDataRes.map(({ banner, id, schedule, stars }) => (
+                        <Locations key={id} banner={banner} id={id} schedule={schedule} stars={stars} />
 
-                <Locations />
+                    ))
+                }
+
 
 
             </div>
