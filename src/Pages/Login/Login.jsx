@@ -31,7 +31,7 @@ const Login = () => {
     return (
 
         <div className=' font-bold h-screen bg-primary grid place-items-center'>
-            <div className=' max-w-min rounded-md shadow-lg p-4 flex flex-col gap-6 bg-white'>
+            <div className=' w-4/5 rounded-lg shadow-2xl p-4 flex flex-col gap-8 bg-white'>
                 <h2>Login</h2>
 
                 {error && <p className='w-full'>{error}</p>}
@@ -41,10 +41,10 @@ const Login = () => {
                     <img className='mx-auto w-14' src={imgLogo} alt="" />
                 </figure>
 
-                <form onSubmit={handleSubmit(onSubmit)} >
+                <form className='flex flex-col gap-5' onSubmit={handleSubmit(onSubmit)} >
                     <div className='flex flex-col'>
                         <label htmlFor="Email">Email</label>
-                        <input className='border-2 rounded-md outline-none' {...register('email', { required: true })} autoComplete='email' type="email" />
+                        <input className='border-2 p-1 rounded-md outline-none' {...register('email', { required: true })} autoComplete='email' type="email" />
                         {
                             errors.email?.type === 'required' &&
 
@@ -57,7 +57,7 @@ const Login = () => {
                     </div>
                     <div className='flex flex-col'>
                         <label htmlFor="Password">Password</label>
-                        <input className='border-2 rounded-md outline-none' {...register('password', { required: true })} type="password" autoComplete='new-password' />
+                        <input className='border-2 p-1 rounded-md outline-none' {...register('password', { required: true })} type="password" autoComplete='new-password' />
                         {
                             errors.password?.type === 'required' &&
 
@@ -69,7 +69,7 @@ const Login = () => {
                         }
                     </div>
 
-                    <button className='w-full mt-6 bg-primary p-2 rounded-lg' type='submit'>SIGN UP</button>
+                    <button className='w-full mt-6 shadow-lg bg-primary p-2 rounded-lg' type='submit'>SIGN UP</button>
                 </form>
                 <p>Need an account ? <span className='underline'><Link to={"/register"} >Login</Link></span></p>
             </div>

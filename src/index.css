@@ -15,3 +15,7 @@ body {
 .bg-primary {
     background-color: var(--primary);
 }
+
+.text-primary {
+    color: var(--primary);
+}
