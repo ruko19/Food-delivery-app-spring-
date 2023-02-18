@@ -32,7 +32,6 @@ export const db = getFirestore(app);
 
 export const getData = async () => {
     const res = await getDocs(collection(db, 'restaurantes'));
-
     return res
 
 }

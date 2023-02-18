@@ -31,14 +31,17 @@ const Home = () => {
     const getDataRes = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
     console.log(getDataRes);
 
-
-
     return (
         <div className=''>
 
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-2 p-3'>
+                {
+                    getDataRes.map(({ id, banner, schedule, stars }) => (
+                        <Locations key={id} banner={banner} id={id} schedule={schedule} stars={stars} />
 
-                <Locations />
+                    ))
+                }
+
 
 
             </div>

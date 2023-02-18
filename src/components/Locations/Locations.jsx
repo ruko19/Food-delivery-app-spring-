@@ -1,19 +1,26 @@
+import { Rating } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import IMGR1 from "../../assets/img/r-1.jpg"
 
-const Locations = () => {
+
+const Locations = ({ banner, id, schedule, stars }) => {
+
     return (
 
         <div>
-            <div className='flex gap-3 w-full'>
-                <figure>
-                    <img className='block w-32' src={IMGR1} alt="" />
-                </figure>
+            <div className='flex gap-3 w-full border border-amber-300 rounded-lg'>
+                <Link to={'/restaurant'}>
+                    <figure>
+                        <img className=' block w-32 rounded-lg shadow-xl' src={banner} alt="" />
+                    </figure>
+                </Link>
                 <div id="info_location">
-                    <h2 className='font-bold'>Pardes Restaurant</h2>
-                    <p>puntaje</p>
-                    <span className='text-xl font-light'>Work time 09:30 - 23:00</span>
-                    <p>Before you <span>4$</span></p>
+                    <h2 className='font-bold'>{id}</h2>
+                    <Rating name="half-rating-read" defaultValue={stars} precision={0.5} readOnly />
+
+                    <p className='text-md font-light'>{schedule}</p>
+
 
                 </div>
 
