@@ -1,0 +1,260 @@
+{
+    "restaurantes": [
+        {
+            "id": 1,
+            "name": "Bigotes Pizzeria",
+            "description": "",
+            "banner": "",
+            "stars": "",
+            "schedule": "",
+            "logo": "",
+            "food-categories": [
+                "pizza",
+                "hamburger",
+                "salad",
+                "pasta"
+            ],
+            "menu": [
+                {
+                    "idItem": 1,
+                    "name": "Chessy Pops Grande",
+                    "description": "",
+                    "price": "49.900",
+                    "image": "",
+                    "category": "",
+                    "cookingTime": ""
+                },
+                {
+                    "idItem": 2,
+                    "name": "Napolitana",
+                    "description": "",
+                    "price": "24.900",
+                    "image": "",
+                    "category": "",
+                    "cookingTime": ""
+                },
+                {
+                    "idItem": 3,
+                    "name": "Vegetariana",
+                    "description": "",
+                    "price": "47.900",
+                    "image": "",
+                    "category": "",
+                    "cookingTime": ""
+                },
+                {
+                    "idItem": "4",
+                    "name": "Mediterránea",
+                    "description": "",
+                    "price": "",
+                    "image": "",
+                    "category": "",
+                    "cookingTime": ""
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "name": "Romero Cocina Artesanal",
+            "description": "",
+            "banner": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676580189/Food-delivery-app/IMG_8071-1024x768_cpw4j9.jpg",
+            "stars": "4",
+            "schedule": "Abierto: 10:00 Am - 10:00 p.m.",
+            "logo": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676580231/Food-delivery-app/romero-gastronomia_jvsxug.jpg",
+            "food-categories": [
+                "salad",
+                "pasta"
+            ],
+            "menu": [
+                {
+                    "idItem": "Pasta Bolognesa",
+                    "name": "",
+                    "description": "Pasta con artesanal salsa bolognesa finalizada con Straciatela. Acompañadas de nuestro tradicional pan Focaccia.",
+                    "price": "33.600",
+                    "image": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676580440/Food-delivery-app/Salsa-Bolognesa-with-Heritage-Blend_otjhyk.jpg",
+                    "category": "pasta",
+                    "cookingTime": "15 min"
+                },
+                {
+                    "idItem": "Pasta Pomodoro",
+                    "name": "",
+                    "description": "Pasta en salsa pomodoro, boconccino, albahaca y trozos de tomate fresco (pasta a elección penne o fetuccini).",
+                    "price": "32.400",
+                    "image": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676580533/Food-delivery-app/Pasta-pomodoro-1-3_yhro8k.jpg",
+                    "category": "pasta",
+                    "cookingTime": "25 min"
+                },
+                {
+                    "idItem": "Insalate Cesar",
+                    "name": "",
+                    "description": "La preparación tradicional acompañada de pera pochada, crutones y salmón ahumado, pollo o jamón serrano a su elección.",
+                    "price": "38.700",
+                    "image": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676580690/Food-delivery-app/755f697272cbcdc6e5df2adb44b1b705_marmns.jpg",
+                    "category": "salad",
+                    "cookingTime": "20 min"
+                },
+                {
+                    "idItem": "Insalate Di Manzo",
+                    "name": "",
+                    "description": "Mix de hojas verdes, champiñón fresco, tomate cherry, queso azul, julianas de solomito y nuestra crocante cebolla puerro, preparados con un toque artesanal.",
+                    "price": "45.000",
+                    "image": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676580757/Food-delivery-app/ae90f55d-0f49-4e84-8424-e17bf78c035e_wrgiwy.jpg",
+                    "category": "salad",
+                    "cookingTime": "22 min"
+                }
+            ]
+        },
+        {
+            "id": "",
+            "name": "El Corral",
+            "description": "",
+            "banner": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676579476/Food-delivery-app/photo0jpg_ass5dq.jpg",
+            "stars": "4",
+            "schedule": "Abierto: 10:00 Am - 10:00 p.m.",
+            "logo": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676579360/Food-delivery-app/El_Corral_wkrgcz.jpg",
+            "food-categories": [
+                "hamburger",
+                "salad"
+            ],
+            "menu": [
+                {
+                    "idItem": "Corralita",
+                    "name": "",
+                    "description": "Jugosa carne 100% de res de 90 g, con tomate en rodajas, cebolla en rodajas, lechuga, salsa blanca y salsa de tomate en pan ajonjolí.",
+                    "price": "24.900",
+                    "image": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676579704/Food-delivery-app/close-up-shot-giant-good-looking-hamburguer-wooden-board_311379-27_conqod.jpg",
+                    "category": "hamburger",
+                    "cookingTime": "25 min"
+                },
+                {
+                    "idItem": "Pollo mexicano",
+                    "name": "",
+                    "description": "Jugosa pechuga de pollo de 154 g, delicioso guacamole, frijol refrito, tortillas de maíz, tomate en rodajas, lechuga en julianas, salsa blanca y pan ajonjolí.Pídela sola por",
+                    "price": "31.900",
+                    "image": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676579844/Food-delivery-app/maxresdefault_fee4oi.jpg",
+                    "category": "hamburger",
+                    "cookingTime": "26 min"
+                },
+                {
+                    "idItem": "Ensalada Mexinaca Vek",
+                    "name": "",
+                    "description": "Deliciosa ensalada con guacamole, frijol refrito, tortillas de maíz, tomate en trozos, maíz y lechuga. Pruébala con aderezo: Suero Costeño",
+                    "price": "26.800",
+                    "image": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676579996/Food-delivery-app/taco-bowl-2-645x840_h0pza6.jpg",
+                    "category": "salad",
+                    "cookingTime": "25 min"
+                },
+                {
+                    "idItem": "Ensalada Corral",
+                    "name": "",
+                    "description": "154 g de deliciosa pechuga de pollo, huevo en rodajas, jamón, una combinación de queso tipo mozzarella y queso parmesano, pepinillos, tomate en trozos, maíz y lechuga fresca. Con aderezo: Balsámico Corral o ranch.",
+                    "price": "32.800",
+                    "image": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676580097/Food-delivery-app/el-corral-ensaladas-ensalada-corral._lw3g99.jpg",
+                    "category": "salad",
+                    "cookingTime": "25 min"
+                }
+            ]
+        },
+        {
+            "id": "Bizzarro",
+            "name": "",
+            "description": "",
+            "banner": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676663877/Food-delivery-app/107099805-1659719296228-gettyimages-1411084513-dsc00409_4ae562dc-763f-4c8b-8d50-29d276018412_wngsdb.jpg",
+            "stars": "5",
+            "schedule": "Abierto: 10:00 Am - 10:00 p.m.",
+            "logo": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676663905/Food-delivery-app/vintage-retro-cheese-burger-hamburger-patty-logo-vector-30051986_kxv1t4.jpg",
+            "food-categories": [
+                "hamburger"
+            ],
+            "menu": [
+                {
+                    "idItem": "Bacon BBQ",
+                    "name": "",
+                    "description": "Pan artesanal sellado a la parrilla con mantequilla, base de salsa chipotle, rúcula fresca, tomate carde de 150 g envuelta en tocineta ahumada a la parrilla y caramelizada en BBQ de la casa, cebolla caramelizada, queso Philadelphia y aros de cebolla apanados.",
+                    "price": "37.500",
+                    "image": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676663430/Food-delivery-app/blue-cheese-bacon-burger-featured_q3nkq8.jpg",
+                    "category": "hamburger",
+                    "cookingTime": "25 min"
+                },
+                {
+                    "idItem": "Cheese & Bacon",
+                    "name": "",
+                    "description": "150gr de carne de res, pan artesanal, queso americano, tocineta, cebolla caramelizada, BBq honey lecuga y tomate",
+                    "price": "25.00",
+                    "image": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676663547/Food-delivery-app/cheeseburger-1_ddlp9a.jpg",
+                    "category": "hamburger",
+                    "cookingTime": "30 min"
+                },
+                {
+                    "idItem": "Pollo Parrillado",
+                    "name": "",
+                    "description": "150 gr de pollo parrillado a las finas hierbas, pan artesanal, tocineta, queso americano, pepinillos, cebolla fresca, lechuga y tomate.",
+                    "price": "24.900",
+                    "image": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676663662/Food-delivery-app/Chicken-Burgers-5_zhbv9y.jpg",
+                    "category": "hamburger",
+                    "cookingTime": "29 min"
+                },
+                {
+                    "idItem": "Veggie",
+                    "name": "",
+                    "description": "Champiñones, queso azul, queso crema, queso americano, pan artesanal, cebolla caramelizada, tomate y lechuga.",
+                    "price": "26.900",
+                    "image": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676663785/Food-delivery-app/0ee46ab1e0ee1cd8c4784476272d9892--chickpea-burger-vegan-burgers_cfhimp.jpg",
+                    "category": "hamburger",
+                    "cookingTime": "20 min"
+                }
+            ]
+        },
+        {
+            "id": "Ragazzi",
+            "name": "",
+            "description": "",
+            "banner": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676664092/Food-delivery-app/Pizzeria_Bianco_dining_room_ramlsi.jpg",
+            "stars": "4",
+            "schedule": "Abierto: 10:00 Am - 10:00 p.m.",
+            "logo": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676664111/Food-delivery-app/Ragazzi_logo-03_zfyzuc.png",
+            "food-categories": [
+                "pizza",
+                "pasta"
+            ],
+            "menu": [
+                {
+                    "idItem": "Pizza del Huerto",
+                    "name": "",
+                    "description": "Masa, pasta de tomate, queso mozzarella, cebolla, tomate, pimentón,champiñones, aceitunas verdes y albahaca.",
+                    "price": "49.900",
+                    "image": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676664426/Food-delivery-app/Eq_it-na_pizza-margherita_sep2005_sml_yiprpq.jpg",
+                    "category": "pizza",
+                    "cookingTime": "27 min"
+                },
+                {
+                    "idItem": "Fiesta Italiana",
+                    "name": "",
+                    "description": "Masa, pasta de tomate, queso mozarella, pollo desmechado marinado en una delicada salsa blanca acompañado champiñones",
+                    "price": "56.900",
+                    "image": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676664509/Food-delivery-app/k_2FPhoto_2FRecipe_20Ramp_20Up_2F2021-07-Chicken-Alfredo-Pizza_2FChicken-Alfredo-Pizza-KitchnKitchn2970-1_01_yqdwcc.jpg",
+                    "category": "pizza",
+                    "cookingTime": "25 min"
+                },
+                {
+                    "idItem": "Pasta Gratinada",
+                    "name": "",
+                    "description": "Pasta corta en salsa napolitana, trozos de lomo de cerdo artesanal, gratinada en pequeños toques de salsa blanca, queso mozarella y parmesano, acompañado de pan con mantequilla de ajo",
+                    "price": "39.900",
+                    "image": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676664666/Food-delivery-app/Spaghetti-Squash-Mushroom-Pie1-500x375_n9cgxi.png",
+                    "category": "pasta",
+                    "cookingTime": "20 min"
+                },
+                {
+                    "idItem": "Lasagna",
+                    "name": "",
+                    "description": "Pollo y champiñones Bolognesa Mixta (Carne y Pollo)",
+                    "price": "37.500",
+                    "image": "https://res.cloudinary.com/dhg1ysx1h/image/upload/v1676664750/Food-delivery-app/Lasagna-Recipe-f_hqbxjz.jpg",
+                    "category": "pasta",
+                    "cookingTime": "20 min"
+                }
+            ]
+        }
+    ]
+}
