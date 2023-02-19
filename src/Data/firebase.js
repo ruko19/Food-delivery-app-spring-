@@ -31,8 +31,14 @@ export const db = getFirestore(app);
 
 // const userCollection = collection(db, 'users');
 
-export const getData = async () => {
-    const res = await getDocs(collection(db, 'restaurantes'));
-    return res
+// export const getData = async () => {
+//     const res = await getDocs(collection(db, 'restaurantes'));
+//     return res
 
+// }
+
+export const getDataRes = () => {
+    const query = collection(db, "restaurantes");
+    const [docs, loading, error, snapshot] = useCollectionData(query);
+    return docs
 }

@@ -10,7 +10,7 @@ const Locations = ({ banner, id, schedule, stars }) => {
 
         <div>
             <div className='flex gap-3 w-full border border-amber-300 rounded-lg'>
-                <Link to={'/restaurant'}>
+                <Link to={`/restaurant/${id}`}>
                     <figure>
                         <img className=' block w-32 rounded-lg shadow-xl' src={banner} alt="" />
                     </figure>

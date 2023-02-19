@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, } from 'react';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import { useAuth } from '../../hooks/useAuth';
 import Locations from '../../components/Locations/Locations';
 import "./Home.css"
 import { collection } from 'firebase/firestore';
-import { db, getData } from '../../Data/firebase';
+import { db } from '../../Data/firebase';
 
 
 const Home = () => {
@@ -24,17 +24,6 @@ const Home = () => {
     console.log(docs);
     if (loading) return 'Loading ...'
 
-    // const { isError, data, isLoading, error } = useQuery({
-    //     queryKey: ['restaurantes'],
-    //     queryFn: getData
-    // })
-
-    // if (isLoading) return 'Loading...'
-
-    // if (error) return 'An error has occurred: ' + error.message
-
-    // const getDataRes = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-    // console.log(getDataRes);
 
     return (
         <div className=''>
@@ -45,7 +34,7 @@ const Home = () => {
                 {
                     docs.map(({ name, banner, schedule, stars }) => (
                         <Locations
-                            key={name}
+                            key={Math.random()}
                             banner={banner}
                             id={name}
                             schedule={schedule}
