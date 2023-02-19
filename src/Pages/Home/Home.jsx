@@ -34,9 +34,10 @@ const Home = () => {
     return (
         <div className=''>
 
-            <div className='flex flex-col gap-2 p-3'>
+
+            <div className='flex flex-col gap-2'>
                 {
-                    getDataRes.map(({ id, banner, schedule, stars }) => (
+                    getDataRes.map(({ banner, id, schedule, stars }) => (
                         <Locations key={id} banner={banner} id={id} schedule={schedule} stars={stars} />
 
                     ))
