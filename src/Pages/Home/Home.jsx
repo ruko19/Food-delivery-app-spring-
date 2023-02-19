@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
-import { useQuery } from 'react-query';
+import { useCollectionData } from 'react-firebase-hooks/firestore';
 import { useAuth } from '../../hooks/useAuth';
-import { BsFillGeoAltFill } from "react-icons/bs";
 import Locations from '../../components/Locations/Locations';
-import { getData } from "../../Data/firebase"
 import "./Home.css"
+import { collection } from 'firebase/firestore';
+import { db, getData } from '../../Data/firebase';
 
 
 const Home = () => {
@@ -16,42 +16,49 @@ const Home = () => {
             console.log(error.message)
 
         }
-
     }
 
-    const { isError, data, isLoading, error } = useQuery({
-        queryKey: ['restaurantes'],
-        queryFn: getData
-    })
 
-    if (isLoading) return 'Loading...'
+    const query = collection(db, "restaurantes")
+    const [docs, loading, error, snapshot] = useCollectionData(query);
+    console.log(docs);
+    if (loading) return 'Loading ...'
 
-    if (error) return 'An error has occurred: ' + error.message
+    // const { isError, data, isLoading, error } = useQuery({
+    //     queryKey: ['restaurantes'],
+    //     queryFn: getData
+    // })
 
-    const getDataRes = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-    console.log(getDataRes);
+    // if (isLoading) return 'Loading...'
+
+    // if (error) return 'An error has occurred: ' + error.message
+
+    // const getDataRes = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+    // console.log(getDataRes);
 
     return (
         <div className=''>
 
 
-            <div className='flex flex-col gap-2'>
-                {
-                    getDataRes.map(({ banner, id, schedule, stars }) => (
-                        <Locations key={id} banner={banner} id={id} schedule={schedule} stars={stars} />
+            <div className='flex flex-col gap-2 p-3'>
 
+                {
+                    docs.map(({ name, banner, schedule, stars }) => (
+                        <Locations
+                            key={name}
+                            banner={banner}
+                            id={name}
+                            schedule={schedule}
+                            stars={stars} />
                     ))
+
                 }
 
 
 
-            </div>
-            <div>
-
-
-
 
             </div>
+
 
         </div>
     )

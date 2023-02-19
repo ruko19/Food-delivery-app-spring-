@@ -14,7 +14,7 @@ const Router = () => {
 
             <div className="   ">
                 <Routes>
-                    <Route path="/restaurant" element={<RestaurantPage />} />
+                    <Route path="/restaurant/:idRes" element={<RestaurantPage />} />
                     <Route path="/home"
                         element={<ProtectedRoute>
                             <Home />
